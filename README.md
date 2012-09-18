@@ -1,14 +1,12 @@
-pixl8r
-======
+monet
+=====
 
-![screenshot](http://cl.ly/JNvG/120911_152844_121.png)
+![screenshot](http://cl.ly/JYNH/120918_140105_283.png)
 
-pixl8s based on mouse position
+interpolates between monet's paintings
 
-## keyboard controls
+##  controls
 
-*	**1-4** select image
-*	**5-9** grid size
-*	**0** toggle hold mode
-*	**[** toggle size mode
-*	**]** toggle background
+*	spacebar switches between square and round pixels
+*	's' saves images
+*	click the mouse to change settings: x position changes speed, y position changes pixel size
