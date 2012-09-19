@@ -11,11 +11,11 @@ boolean ellipticalPixel = true;
 int imagestotal = 4;
 PImage[] imgs;
 int imgcount;
-int alpha = 255;
+int transp = 255;
 
 void setup(){
   //vars you should change
-  gridStep = 5; //pixel size
+  gridStep = 10; //pixel size
   colorStep = .01; //how drastically the color changes each draw, changed live based on mouseX on click
   colorMode(HSB); //RGB also works
   //don't change these
@@ -39,10 +39,10 @@ void draw() {
   for (int gridY=0; gridY<from.height; gridY+=gridStep) {
     for (int gridX=0; gridX<from.width; gridX+=gridStep) {
       //set fill to image color at grid position
-      fill(lerpColor(from.get(gridX, gridY), to.get(gridX, gridY), where),alpha);
+      fill(lerpColor(from.get(gridX, gridY), to.get(gridX, gridY), where),transp);
 
       //set diameter based on distance
-      float diameter = gridStep * 2;
+      float diameter = float(gridStep)*2;
       
       pushMatrix();
       translate(gridX, gridY, diameter*5);
@@ -78,10 +78,22 @@ void draw() {
 void keyReleased(){
   if (key=='s' || key=='S') saveFrame("out/"+timestamp()+"_##.png");
   if (key==' ') ellipticalPixel = !ellipticalPixel;
-  if (key=='c' || key =='C') {
+  if (key=='r' || key=='R') colorMode(RGB);
+  if (key=='h' || key=='H') colorMode(HSB);
+//  if (key=='c' || key =='C') {
 //    if(colorMode() == RGB) colorMode(HSB);
 //    else colorMode(RGB);
-  }
+//  }
+  if (key=='1') transp = 1;
+  if (key=='2') transp = 3;
+  if (key=='3') transp = 5;
+  if (key=='4') transp = 9;
+  if (key=='5') transp = 16;
+  if (key=='6') transp = 28;
+  if (key=='7') transp = 48;
+  if (key=='8') transp = 84;
+  if (key=='9') transp = 147;
+  if (key=='0') transp = 255;
 }
 void mouseReleased() {
   gridStep = int((float(mouseY)/float(height) * height/20)+10);
