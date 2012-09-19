@@ -8,18 +8,29 @@ PImage to;
 float where = 0;
 float colorStep;
 boolean ellipticalPixel = true;
-int imagestotal = 3;
+int imagestotal;
 PImage[] imgs;
 int imgcount;
 int transp = 255;
 
 void setup(){
-  //vars you should change
+  
+  ///////////////////////////
+  //YOU SHOULD CHANGE THIS///
+  ///////////////////////////
+  imagestotal = 5;
+  //this is the number of images in /data
+  //these images should be named [number 0-x].jpeg
+  //they all need to be the same size
+  
+  
+  //defaults(changable from within program)  
   gridStep = 10; //pixel size
   colorStep = .01; //how drastically the color changes each draw, changed live based on mouseX on click
   colorMode(HSB); //RGB also works
-  //don't change these
+  
   //load images
+  imagestotal = imagestotal-1
   imgs = new PImage[imagestotal];
   for(imgcount = 0; imgcount < imgs.length; imgcount++){
     imgs[imgcount] = loadImage(imgcount+".jpeg");

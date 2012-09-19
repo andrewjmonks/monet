@@ -1,7 +1,7 @@
 monet
 =====
 
-![screenshot](http://cl.ly/JYNH/120918_140105_283.png)
+![screenshot](http://cl.ly/JZGu/anim.gif)
 
 interpolates between monet's paintings
 
