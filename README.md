@@ -1,11 +1,11 @@
 monet
 =====
 
+## The animated impressionistic interpolator!
+
 ![screenshot](http://cl.ly/JZGu/anim.gif)
 
-interpolates between monet's paintings
-
-##  controls
+###  controls
 
 *	spacebar switches between square and round pixels
 *	'r' switches to RGB mode
