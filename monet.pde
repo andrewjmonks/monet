@@ -8,7 +8,7 @@ PImage to;
 float where = 0;
 float colorStep;
 boolean ellipticalPixel = true;
-int imagestotal = 4;
+int imagestotal = 3;
 PImage[] imgs;
 int imgcount;
 int transp = 255;
@@ -34,6 +34,7 @@ void setup(){
 }
 
 void draw() {
+  //saveFrame("out/anim/"+imgcount+"-"+where+".gif");
   smooth();
   // loop grid
   for (int gridY=0; gridY<from.height; gridY+=gridStep) {
@@ -84,7 +85,7 @@ void keyReleased(){
 //    if(colorMode() == RGB) colorMode(HSB);
 //    else colorMode(RGB);
 //  }
-  if (key=='1') transp = 1;
+  if (key=='1') transp = 2;
   if (key=='2') transp = 3;
   if (key=='3') transp = 5;
   if (key=='4') transp = 9;
