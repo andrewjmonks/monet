@@ -30,7 +30,7 @@ void setup(){
   colorMode(HSB); //RGB also works
   
   //load images
-  imagestotal = imagestotal-1
+  imagestotal = imagestotal-1;
   imgs = new PImage[imagestotal];
   for(imgcount = 0; imgcount < imgs.length; imgcount++){
     imgs[imgcount] = loadImage(imgcount+".jpeg");
