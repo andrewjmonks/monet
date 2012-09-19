@@ -3,7 +3,7 @@ monet
 
 ## The animated impressionistic interpolator!
 
-![screenshot](http://cl.ly/JZGu/anim.gif)
+![screenshot](https://raw.github.com/andrewjmonks/monet/master/gif.gif)
 
 ###  controls
 
